@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CursorChanger.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IntroLevel.cs">
     <Files>
-      <File FileName="Assets\Scripts\CursorChanger.cs" Line="25" Column="14" />
+      <File FileName="Assets\Scripts\IntroLevel.cs" Line="29" Column="4" />
+      <File FileName="Assets\Scripts\AnimatedText.cs" Line="27" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

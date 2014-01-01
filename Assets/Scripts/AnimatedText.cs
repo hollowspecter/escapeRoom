@@ -13,6 +13,7 @@ public class AnimatedText : MonoBehaviour {
 	// is true when player "submits" to close the dialog
 	private bool isClosed;
 	private Queue textQueue;
+	private bool isEmpty;
 
 	// Use this for initialization
 	void Start ()
@@ -24,13 +25,15 @@ public class AnimatedText : MonoBehaviour {
 		isClosed = true;
 
 		textQueue = new Queue();
-		textQueue.Enqueue("First text, dam dam");
-		textQueue.Enqueue("Second text, works fine!");
 	}
 
 	void Update()
 	{
-		if (Input.anyKeyDown && isDone)
+		isEmpty = (textQueue.Count == 0);
+
+		if ((Input.GetKeyDown(KeyCode.Space)
+		     || Input.GetKeyDown(KeyCode.Return))
+		     && isDone)
 		{
 			close ();
 		}
@@ -53,6 +56,7 @@ public class AnimatedText : MonoBehaviour {
 		if (!isDone)
 		{
 			isClosed = false;
+			CursorChanger.setHide(true);
 			isDone = false;
 			audio.Play();
 			int i=0;
@@ -70,11 +74,18 @@ public class AnimatedText : MonoBehaviour {
 
 	private void close()
 	{
-		if (isDone) {
-			if (Input.anyKeyDown) {
-				isClosed = true;
-				isDone = false;
-			}
-		}
+		isClosed = true;
+		isDone = false;
+		CursorChanger.setHide(false);
+	}
+
+	public void showText(string text)
+	{
+		textQueue.Enqueue(text);
+	}
+
+	public bool queueIsEmpty()
+	{
+		return isEmpty;
 	}
 }

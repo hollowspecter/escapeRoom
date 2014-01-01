@@ -5,6 +5,8 @@ public class CursorChanger : MonoBehaviour {
 
 	public Texture2D defaultCursor;
 	public Texture2D handCursor;
+	public static bool hide;
+	public static bool hand;
 
 	private Texture2D currentCursor;
 
@@ -13,25 +15,36 @@ public class CursorChanger : MonoBehaviour {
 		Screen.showCursor= false;
 		currentCursor = defaultCursor;
 	}
-	
+
+	void Update()
+	{
+		if (hand)
+			currentCursor = handCursor;
+		else
+			currentCursor = defaultCursor;
+	}
+
 	void OnGUI()
 	{
-		Vector3 mousePos = Input.mousePosition;
-		Rect pos = new Rect(mousePos.x, Screen.height - mousePos.y, currentCursor.width, currentCursor.height);
-		GUI.Label(pos,currentCursor);
+		if (!hide)
+		{
+			Vector3 mousePos = Input.mousePosition;
+			Rect pos = new Rect(mousePos.x, Screen.height - mousePos.y, currentCursor.width, currentCursor.height);
+			GUI.Label(pos,currentCursor);
+		}
 	}
 
 	/*
 	 * Switching functions
 	 */
 
-	public void switchToHand()
+	public static void setHand(bool b)
 	{
-		currentCursor = handCursor;
+		hand = b;
 	}
 
-	public void switchToDefault()
+	public static void setHide(bool b)
 	{
-		currentCursor = defaultCursor;
+		hide = b;
 	}
 }
