@@ -56,7 +56,7 @@ public class AnimatedText : MonoBehaviour {
 		if (!isDone)
 		{
 			isClosed = false;
-			CursorChanger.setHide(true);
+			CursorIngame.setHide(true);
 			isDone = false;
 			audio.Play();
 			int i=0;
@@ -76,7 +76,7 @@ public class AnimatedText : MonoBehaviour {
 	{
 		isClosed = true;
 		isDone = false;
-		CursorChanger.setHide(false);
+		CursorIngame.setHide(false);
 	}
 
 	public void showText(string text)

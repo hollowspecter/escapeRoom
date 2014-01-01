@@ -5,11 +5,11 @@ public class CursorChangeOverObject : MonoBehaviour {
 
 	void OnMouseEnter()
 	{
-		CursorChanger.setHand(true);
+		CursorIngame.setHand(true);
 	}
 
 	void OnMouseExit()
 	{
-		CursorChanger.setHand(false);
+		CursorIngame.setHand(false);
 	}	
 }
