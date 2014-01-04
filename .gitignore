@@ -1,2 +1,7 @@
 Temp/*
 Builds/*
+Library/*
+*.csproj
+*.unityproj
+*.sln
+*.meta
