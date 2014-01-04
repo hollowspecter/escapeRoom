@@ -5,6 +5,8 @@ public class CameraPanDown : MonoBehaviour {
 
 	public float speed = 10;
 
+	private bool introOver = false;
+
 	// Use this for initialization
 	void Start () {
 		transform.position = new Vector3(0,6,-10);
@@ -16,6 +18,13 @@ public class CameraPanDown : MonoBehaviour {
 		{
 			Vector3 movement = new Vector3(0, transform.position.y - speed * Time.deltaTime, -10);
 			transform.position = movement;
+			CursorIngame.setHide(true);
+		}
+		// only called once
+		else if (!introOver)
+		{
+			introOver = true;
+			IntroLevel.nextEvent();
 		}
 	}
 }

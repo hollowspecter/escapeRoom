@@ -1,14 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FollowCamera.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level 0\Door.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelEvents\IntroLevel.cs" Line="72" Column="7" />
-      <File FileName="Assets\Scripts\AnimatedText.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Items\ItemHandling.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CursorChangeOverObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FadeInOut.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FollowCamera.cs" Line="6" Column="45" />
+      <File FileName="Assets\Scripts\Level 0\CameraPanDown.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level 0\Platforms.cs" Line="20" Column="6" />
+      <File FileName="Assets\Scripts\Level 0\IntroLevel.cs" Line="21" Column="30" />
+      <File FileName="Assets\Scripts\Level 0\Door.cs" Line="9" Column="29" />
+      <File FileName="Assets\Scripts\Level 0\House.cs" Line="13" Column="77" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
