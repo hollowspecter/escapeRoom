@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{57ADA08B-2229-530A-7239-9A694B3912A8}</ProjectGuid>
+	<ProjectGuid>{EB3C065D-C037-72AE-03B5-05DA8BD974AC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,14 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AnimatedText.cs" />
-     <Compile Include="Assets\Scripts\CursorChangeOverObject.cs" />
-     <Compile Include="Assets\Scripts\CursorIngame.cs" />
-     <Compile Include="Assets\Scripts\Door.cs" />
-     <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Items\ItemHandling.cs" />
-     <Compile Include="Assets\Scripts\LevelEvents\IntroLevel.cs" />
-     <Compile Include="Assets\Scripts\LevelEvents\NYGJtext.cs" />
+     <Compile Include="Assets\Scripts\FadeInOut.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

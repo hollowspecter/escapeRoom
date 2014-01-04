@@ -4,6 +4,7 @@ using System.Collections;
 public class ItemHandling : MonoBehaviour {
 	
 	public int ID;
+	public string description;
 	private bool isStored;
 
 	// Use this for initialization
@@ -17,6 +18,15 @@ public class ItemHandling : MonoBehaviour {
 		if (isStored && !CursorIngame.getHide())
 		{
 			Inventory.setSelectedItem(ID);
+		}
+	}
+
+	void OnMouseOver()
+	{
+		// On right click show description
+		if (Input.GetMouseButtonDown(1) && !CursorIngame.getHide())
+		{
+			GameObject.FindWithTag("text").SendMessage("showText", description);
 		}
 	}
 

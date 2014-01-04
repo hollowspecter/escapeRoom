@@ -5,6 +5,7 @@ public class AnimatedText : MonoBehaviour {
 
 	public Vector2 scale;
 	public Vector2 offset;
+	public float waitBetweenLetters = 0.05f;
 
 	private string str;
 	private Vector2 position;
@@ -64,7 +65,7 @@ public class AnimatedText : MonoBehaviour {
 			while(i < strComplete.Length)
 			{
 				str += strComplete[i++];
-				yield return new WaitForSeconds(0.1f);
+				yield return new WaitForSeconds(waitBetweenLetters);
 			}
 			audio.Stop();
 			new WaitForSeconds(0.2f);

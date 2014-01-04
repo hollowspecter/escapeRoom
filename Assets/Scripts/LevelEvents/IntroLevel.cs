@@ -4,6 +4,7 @@ using System.Collections;
 public class IntroLevel : MonoBehaviour {
 
 	public Inventory inventory;
+	public AudioClip audio_footsteps;
 
 	private static int ID;
 	private static bool next;
@@ -67,7 +68,10 @@ public class IntroLevel : MonoBehaviour {
 				incrementID();
 				break;
 			case 6:
-				Application.LoadLevel (1);
+				audio.PlayOneShot(audio_footsteps);
+				Camera.main.SendMessage("fadeOut");
+				StartCoroutine(loadNextLevel());
+				incrementID ();
 				break;
 			default:
 				break;
@@ -75,6 +79,12 @@ public class IntroLevel : MonoBehaviour {
 		}
 	}
 
+	private IEnumerator loadNextLevel()
+	{
+		yield return new WaitForSeconds(audio_footsteps.length);
+		Application.LoadLevel (1);
+	}
+	
 	private static void incrementID()
 	{
 		ID++;
